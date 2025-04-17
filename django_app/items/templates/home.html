@@ -1,0 +1,11 @@
+<h1>Item List</h1>
+<ul>
+    {% for item in items %}
+        <li>{{ item.name }}</li>
+    {% endfor %}
+</ul>
+<form method="POST">
+    {% csrf_token %}
+    <input type="text" name="name" placeholder="Add new item">
+    <input type="submit" value="Add">
+</form>
